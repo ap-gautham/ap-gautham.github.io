@@ -1,3 +1,14 @@
+# My NOTES - 
+
+https://github.com/manuelernestog/astrofy/tree/main
+
+1. After editing, run "npm run build"
+2. Then run "git add . && git commit -m ‘Message’ && git push origin main"
+3. Once the site is compiled on github, it should get updated.
+
+
+
+
 # Astrofy | Personal Portfolio Website Template
 
 ![Astrofy | Personal Porfolio Website Template](public/social_img.webp)
