@@ -5,11 +5,10 @@ import { Image } from "astro:assets";
 ---
 
 <BaseLayout title = "Projects" sideBarActiveItemID="projects">
-  <div>
-    <div class="text-3xl w-full font-bold mb-5">My sketches and painting from over the years!</div>
-  </div>
-
   <div class="image-container">
+    
+    <div id="text-0" class="text-3xl w-full font-bold mb-5">My sketches and painting from over the years!</div>
+
     <img src="/art/1.png" alt="Image 1" id="image-1" />
     <img src="/art/17.png" alt="Image 17" id="image-17" />
     <img src="/art/15.png" alt="Image 15" id="image-15" />
@@ -55,6 +54,7 @@ import { Image } from "astro:assets";
   <script>
     function positionElements() {
       const pageElements = [
+	{ id: 'text-0', left: '280px', top: '-28px', width: '800px', height: '150px', type: 'text' },
         { id: 'image-1', scale: 0.4, left: '625px', top: '25px', type: 'image' },
         { id: 'image-17', scale: 0.455, left: '25px', top: '25px', type: 'image' },
         { id: 'image-15', scale: 0.35, left: '55px', top: '800px', type: 'image' },
@@ -83,7 +83,7 @@ import { Image } from "astro:assets";
         { id: 'image-20', scale: 0.3, left: '75px', top: '7825px', type: 'image' },
         { id: 'image-27', scale: 0.3456, left: '525px', top: '7825px', type: 'image' },
         { id: 'image-0', scale: 0.75, left: '325px', top: '8460px', type: 'image' },
-        { id: 'text-1', left: '425px', top: '8375px', width: '800px', height: '150px', type: 'text' },
+        { id: 'text-1', left: '305px', top: '8375px', width: '800px', height: '150px', type: 'text' },
         { id: 'text-2', left: '376px', top: '8915px', width: '800px', height: '150px', type: 'text' },
       ];
 
