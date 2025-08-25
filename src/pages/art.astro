@@ -5,17 +5,9 @@ import { Image } from "astro:assets";
 ---
 
 <BaseLayout title = "Projects" sideBarActiveItemID="projects">
-<div class="flex-container">
-  <div id="text-0" class="text-3xl w-full font-bold mb-5 "> My sketches and painting from over the years! </div>
-  <script>
-    const text0 = document.getElementById('text-0');
-    text0.style.position = 'absolute';
-    text0.style.left = '600px';
-    text0.style.top = '25px';
-    text0.style.width = '800px';
-    text0.style.height = '150px';
-  </script>
-</div>
+  <div>
+    <div class="text-3xl w-full font-bold mb-5">My sketches and painting from over the years!</div>
+  </div>
 
   <div class="image-container">
     <img src="/art/1.png" alt="Image 1" id="image-1" />
@@ -61,41 +53,40 @@ import { Image } from "astro:assets";
   </style>
 
   <script>
-    // Define all image and text data in one place
-    const pageElements = [
-      { id: 'image-1', scale: 0.4, left: '625px', top: '25px', type: 'image' },
-      { id: 'image-17', scale: 0.455, left: '25px', top: '25px', type: 'image' },
-      { id: 'image-15', scale: 0.35, left: '55px', top: '800px', type: 'image' },
-      { id: 'image-18', scale: 0.425, left: '621px', top: '715px', type: 'image' },
-      { id: 'image-19', scale: 0.27, left: '25px', top: '1425px', type: 'image' },
-      { id: 'image-26', scale: 0.27, left: '368px', top: '1425px', type: 'image' },
-      { id: 'image-16', scale: 0.27, left: '820px', top: '1425px', type: 'image' },
-      { id: 'image-11', scale: 0.6, left: '175px', top: '1890px', type: 'image' },
-      { id: 'image-12', scale: 0.42, left: '25px', top: '2500px', type: 'image' },
-      { id: 'image-14', scale: 0.42, left: '590px', top: '2550px', type: 'image' },
-      { id: 'image-13', scale: 0.5, left: '25px', top: '3225px', type: 'image' },
-      { id: 'image-3', scale: 0.33, left: '700px', top: '3127px', type: 'image' },
-      { id: 'image-23', scale: 0.55, left: '240px', top: '3695px', type: 'image' },
-      { id: 'image-21', scale: 0.34, left: '25px', top: '4585px', type: 'image' },
-      { id: 'image-22', scale: 0.3, left: '585px', top: '4645px', type: 'image' },
-      { id: 'image-6', scale: 0.35, left: '75px', top: '5125px', type: 'image' },
-      { id: 'image-7', scale: 0.3, left: '625px', top: '5065px', type: 'image' },
-      { id: 'image-9', scale: 0.25, left: '25px', top: '5604px', type: 'image' },
-      { id: 'image-2', scale: 0.26, left: '495px', top: '5604px', type: 'image' },
-      { id: 'image-4', scale: 0.19, left: '800px', top: '5600px', type: 'image' },
-      { id: 'image-8', scale: 0.5, left: '225px', top: '5955px', type: 'image' },
-      { id: 'image-10', scale: 0.45, left: '25px', top: '6775px', type: 'image' },
-      { id: 'image-24', scale: 0.333, left: '595px', top: '6775px', type: 'image' },
-      { id: 'image-5', scale: 0.35, left: '105px', top: '7225px', type: 'image' },
-      { id: 'image-25', scale: 0.339, left: '595px', top: '7225px', type: 'image' },
-      { id: 'image-20', scale: 0.3, left: '75px', top: '7825px', type: 'image' },
-      { id: 'image-27', scale: 0.3456, left: '525px', top: '7825px', type: 'image' },
-      { id: 'image-0', scale: 0.75, left: '325px', top: '8460px', type: 'image' },
-      { id: 'text-1', left: '425px', top: '8375px', width: '800px', height: '150px', type: 'text' },
-      { id: 'text-2', left: '376px', top: '8915px', width: '800px', height: '150px', type: 'text' },
-    ];
-
     function positionElements() {
+      const pageElements = [
+        { id: 'image-1', scale: 0.4, left: '625px', top: '25px', type: 'image' },
+        { id: 'image-17', scale: 0.455, left: '25px', top: '25px', type: 'image' },
+        { id: 'image-15', scale: 0.35, left: '55px', top: '800px', type: 'image' },
+        { id: 'image-18', scale: 0.425, left: '621px', top: '715px', type: 'image' },
+        { id: 'image-19', scale: 0.27, left: '25px', top: '1425px', type: 'image' },
+        { id: 'image-26', scale: 0.27, left: '368px', top: '1425px', type: 'image' },
+        { id: 'image-16', scale: 0.27, left: '820px', top: '1425px', type: 'image' },
+        { id: 'image-11', scale: 0.6, left: '175px', top: '1890px', type: 'image' },
+        { id: 'image-12', scale: 0.42, left: '25px', top: '2500px', type: 'image' },
+        { id: 'image-14', scale: 0.42, left: '590px', top: '2550px', type: 'image' },
+        { id: 'image-13', scale: 0.5, left: '25px', top: '3225px', type: 'image' },
+        { id: 'image-3', scale: 0.33, left: '700px', top: '3127px', type: 'image' },
+        { id: 'image-23', scale: 0.55, left: '240px', top: '3695px', type: 'image' },
+        { id: 'image-21', scale: 0.34, left: '25px', top: '4585px', type: 'image' },
+        { id: 'image-22', scale: 0.3, left: '585px', top: '4645px', type: 'image' },
+        { id: 'image-6', scale: 0.35, left: '75px', top: '5125px', type: 'image' },
+        { id: 'image-7', scale: 0.3, left: '625px', top: '5065px', type: 'image' },
+        { id: 'image-9', scale: 0.25, left: '25px', top: '5604px', type: 'image' },
+        { id: 'image-2', scale: 0.26, left: '495px', top: '5604px', type: 'image' },
+        { id: 'image-4', scale: 0.19, left: '800px', top: '5600px', type: 'image' },
+        { id: 'image-8', scale: 0.5, left: '225px', top: '5955px', type: 'image' },
+        { id: 'image-10', scale: 0.45, left: '25px', top: '6775px', type: 'image' },
+        { id: 'image-24', scale: 0.333, left: '595px', top: '6775px', type: 'image' },
+        { id: 'image-5', scale: 0.35, left: '105px', top: '7225px', type: 'image' },
+        { id: 'image-25', scale: 0.339, left: '595px', top: '7225px', type: 'image' },
+        { id: 'image-20', scale: 0.3, left: '75px', top: '7825px', type: 'image' },
+        { id: 'image-27', scale: 0.3456, left: '525px', top: '7825px', type: 'image' },
+        { id: 'image-0', scale: 0.75, left: '325px', top: '8460px', type: 'image' },
+        { id: 'text-1', left: '425px', top: '8375px', width: '800px', height: '150px', type: 'text' },
+        { id: 'text-2', left: '376px', top: '8915px', width: '800px', height: '150px', type: 'text' },
+      ];
+
       pageElements.forEach(item => {
         const el = document.getElementById(item.id);
         if (!el) return;
@@ -105,7 +96,6 @@ import { Image } from "astro:assets";
         el.style.top = item.top;
 
         if (item.type === 'image') {
-          // Only scale if dimensions are available
           if (el.naturalWidth > 0 && el.naturalHeight > 0) {
             el.style.width = `${el.naturalWidth * item.scale}px`;
             el.style.height = `${el.naturalHeight * item.scale}px`;
@@ -117,25 +107,8 @@ import { Image } from "astro:assets";
       });
     }
 
-    function handlePageLoad() {
-      pageElements.forEach(item => {
-        const el = document.getElementById(item.id);
-        if (el && item.type === 'image') {
-          // If the image is already complete (cached), position it immediately
-          if (el.complete) {
-            positionElements();
-          } else {
-            // Otherwise, wait for the image to load
-            el.onload = positionElements;
-          }
-        }
-      });
-      // A fallback in case `onload` doesn't fire as expected
-      window.addEventListener('load', positionElements);
-    }
-
-    // Run the handler when the DOM is ready
-    window.addEventListener('DOMContentLoaded', handlePageLoad);
+    // Run the script after a brief delay to give all content a chance to load
+    setTimeout(positionElements, 250);
 
     // Re-run the positioning when the page is restored from the back/forward cache
     window.addEventListener('pageshow', (event) => {
