@@ -4,12 +4,7 @@ import HorizontalCard from "../components/HorizontalCard.astro";
 import { Image } from "astro:assets";
 ---
 
-
 <BaseLayout title = "Projects" sideBarActiveItemID="projects">
-  <div>
-    <div class="text-3xl w-full font-bold mb-5"> </div>
-  </div>
-
 <div class="flex-container">
   <div id="text-0" class="text-3xl w-full font-bold mb-5 "> My sketches and painting from over the years! </div>
   <script>
@@ -22,350 +17,131 @@ import { Image } from "astro:assets";
   </script>
 </div>
 
-<div class="image-container">
+  <div class="image-container">
+    <img src="/art/1.png" alt="Image 1" id="image-1" />
+    <img src="/art/17.png" alt="Image 17" id="image-17" />
+    <img src="/art/15.png" alt="Image 15" id="image-15" />
+    <img src="/art/18.png" alt="Image 18" id="image-18" />
+    <img src="/art/19.png" alt="Image 19" id="image-19" />
+    <img src="/art/26.png" alt="Image 26" id="image-26" />
+    <img src="/art/16.png" alt="Image 16" id="image-16" />
+    <img src="/art/11.png" alt="Image 11" id="image-11" />
+    <img src="/art/12.png" alt="Image 12" id="image-12" />
+    <img src="/art/14.png" alt="Image 14" id="image-14" />
+    <img src="/art/13.png" alt="Image 13" id="image-13" />
+    <img src="/art/3.png" alt="Image 3" id="image-3" />
+    <img src="/art/23.png" alt="Image 23" id="image-23" />
+    <img src="/art/21.png" alt="Image 21" id="image-21" />
+    <img src="/art/22.png" alt="Image 22" id="image-22" />
+    <img src="/art/6.png" alt="Image 6" id="image-6" />
+    <img src="/art/7.png" alt="Image 7" id="image-7" />
+    <img src="/art/9.png" alt="Image 9" id="image-9" />
+    <img src="/art/2.png" alt="Image 2" id="image-2" />
+    <img src="/art/4.png" alt="Image 4" id="image-4" />
+    <img src="/art/8.png" alt="Image 8" id="image-8" />
+    <img src="/art/10.png" alt="Image 10" id="image-10" />
+    <img src="/art/24.png" alt="Image 24" id="image-24" />
+    <img src="/art/5.png" alt="Image 5" id="image-5" />
+    <img src="/art/25.png" alt="Image 25" id="image-25" />
+    <img src="/art/20.png" alt="Image 20" id="image-20" />
+    <img src="/art/27.png" alt="Image 27" id="image-27" />
+    <img src="/art/0.png" alt="Myself!" id="image-0" />
+    
+    <div id="text-1" class="text-3xl w-full font-bold mb-5 ">Oh, and I didn't forget to draw myself ... </div>
+    <div id="text-2" class="text-1l w-full mb-5 "> (confused by the world as always, of course!) </div>
+  </div>
 
-  <img src="/art/17.png" alt="Image 17" id="image-17" />
+  <style>
+    .image-container {
+      position: relative;
+      width: 1000px;
+      height: 9100px;
+      margin-left: -150px;
+    }
+  </style>
+
   <script>
-    const img17 = document.getElementById('image-17');
-    const scaleFactor17 = 0.455; // Change this value to customize the size
-    img17.style.position = 'absolute';
-    img17.style.left = '25px';
-    img17.style.top = '25px';
-    img17.style.width = `${img17.naturalWidth * scaleFactor17}px`;
-    img17.style.height = `${img17.naturalHeight * scaleFactor17}px`;
+    // Define all image and text data in one place
+    const pageElements = [
+      { id: 'image-1', scale: 0.4, left: '625px', top: '25px', type: 'image' },
+      { id: 'image-17', scale: 0.455, left: '25px', top: '25px', type: 'image' },
+      { id: 'image-15', scale: 0.35, left: '55px', top: '800px', type: 'image' },
+      { id: 'image-18', scale: 0.425, left: '621px', top: '715px', type: 'image' },
+      { id: 'image-19', scale: 0.27, left: '25px', top: '1425px', type: 'image' },
+      { id: 'image-26', scale: 0.27, left: '368px', top: '1425px', type: 'image' },
+      { id: 'image-16', scale: 0.27, left: '820px', top: '1425px', type: 'image' },
+      { id: 'image-11', scale: 0.6, left: '175px', top: '1890px', type: 'image' },
+      { id: 'image-12', scale: 0.42, left: '25px', top: '2500px', type: 'image' },
+      { id: 'image-14', scale: 0.42, left: '590px', top: '2550px', type: 'image' },
+      { id: 'image-13', scale: 0.5, left: '25px', top: '3225px', type: 'image' },
+      { id: 'image-3', scale: 0.33, left: '700px', top: '3127px', type: 'image' },
+      { id: 'image-23', scale: 0.55, left: '240px', top: '3695px', type: 'image' },
+      { id: 'image-21', scale: 0.34, left: '25px', top: '4585px', type: 'image' },
+      { id: 'image-22', scale: 0.3, left: '585px', top: '4645px', type: 'image' },
+      { id: 'image-6', scale: 0.35, left: '75px', top: '5125px', type: 'image' },
+      { id: 'image-7', scale: 0.3, left: '625px', top: '5065px', type: 'image' },
+      { id: 'image-9', scale: 0.25, left: '25px', top: '5604px', type: 'image' },
+      { id: 'image-2', scale: 0.26, left: '495px', top: '5604px', type: 'image' },
+      { id: 'image-4', scale: 0.19, left: '800px', top: '5600px', type: 'image' },
+      { id: 'image-8', scale: 0.5, left: '225px', top: '5955px', type: 'image' },
+      { id: 'image-10', scale: 0.45, left: '25px', top: '6775px', type: 'image' },
+      { id: 'image-24', scale: 0.333, left: '595px', top: '6775px', type: 'image' },
+      { id: 'image-5', scale: 0.35, left: '105px', top: '7225px', type: 'image' },
+      { id: 'image-25', scale: 0.339, left: '595px', top: '7225px', type: 'image' },
+      { id: 'image-20', scale: 0.3, left: '75px', top: '7825px', type: 'image' },
+      { id: 'image-27', scale: 0.3456, left: '525px', top: '7825px', type: 'image' },
+      { id: 'image-0', scale: 0.75, left: '325px', top: '8460px', type: 'image' },
+      { id: 'text-1', left: '425px', top: '8375px', width: '800px', height: '150px', type: 'text' },
+      { id: 'text-2', left: '376px', top: '8915px', width: '800px', height: '150px', type: 'text' },
+    ];
+
+    function positionElements() {
+      pageElements.forEach(item => {
+        const el = document.getElementById(item.id);
+        if (!el) return;
+
+        el.style.position = 'absolute';
+        el.style.left = item.left;
+        el.style.top = item.top;
+
+        if (item.type === 'image') {
+          // Only scale if dimensions are available
+          if (el.naturalWidth > 0 && el.naturalHeight > 0) {
+            el.style.width = `${el.naturalWidth * item.scale}px`;
+            el.style.height = `${el.naturalHeight * item.scale}px`;
+          }
+        } else if (item.type === 'text') {
+          el.style.width = item.width;
+          el.style.height = item.height;
+        }
+      });
+    }
+
+    function handlePageLoad() {
+      pageElements.forEach(item => {
+        const el = document.getElementById(item.id);
+        if (el && item.type === 'image') {
+          // If the image is already complete (cached), position it immediately
+          if (el.complete) {
+            positionElements();
+          } else {
+            // Otherwise, wait for the image to load
+            el.onload = positionElements;
+          }
+        }
+      });
+      // A fallback in case `onload` doesn't fire as expected
+      window.addEventListener('load', positionElements);
+    }
+
+    // Run the handler when the DOM is ready
+    window.addEventListener('DOMContentLoaded', handlePageLoad);
+
+    // Re-run the positioning when the page is restored from the back/forward cache
+    window.addEventListener('pageshow', (event) => {
+      if (event.persisted) {
+        positionElements();
+      }
+    });
   </script>
-
-  <img src="/art/1.png" alt="Image 1" id="image-1" />
-  <script>
-    const img1 = document.getElementById('image-1');
-    const scaleFactor1 = 0.4; // Change this value to customize the size
-    img1.style.position = 'absolute';
-    img1.style.left = '625px';
-    img1.style.top = '25px';
-    img1.style.width = `${img1.naturalWidth * scaleFactor1}px`;
-    img1.style.height = `${img1.naturalHeight * scaleFactor1}px`;
-  </script>
-
-  <img src="/art/15.png" alt="Image 15" id="image-15" />
-  <script>
-    const img15 = document.getElementById('image-15');
-    const scaleFactor15 = 0.35; // Change this value to customize the size
-    img15.style.position = 'absolute';
-    img15.style.left = '55px';
-    img15.style.top = '800px';
-    img15.style.width = `${img15.naturalWidth * scaleFactor15}px`;
-    img15.style.height = `${img15.naturalHeight * scaleFactor15}px`;
-  </script>
-
-  <img src="/art/18.png" alt="Image 18" id="image-18" />
-  <script>
-    const img18 = document.getElementById('image-18');
-    const scaleFactor18 = 0.425; // Change this value to customize the size
-    img18.style.position = 'absolute';
-    img18.style.left = '621px';
-    img18.style.top = '715px';
-    img18.style.width = `${img18.naturalWidth * scaleFactor18}px`;
-    img18.style.height = `${img18.naturalHeight * scaleFactor18}px`;
-  </script>
-
-  <img src="/art/19.png" alt="Image 19" id="image-19" />
-  <script>
-    const img19 = document.getElementById('image-19');
-    const scaleFactor19 = 0.27; // Change this value to customize the size
-    img19.style.position = 'absolute';
-    img19.style.left = '25px';
-    img19.style.top = '1425px';
-    img19.style.width = `${img19.naturalWidth * scaleFactor19}px`;
-    img19.style.height = `${img19.naturalHeight * scaleFactor19}px`;
-  </script>
-
-  <img src="/art/26.png" alt="Image 26" id="image-26" />
-  <script>
-    const img26 = document.getElementById('image-26');
-    const scaleFactor26 = 0.27; // Change this value to customize the size
-    img26.style.position = 'absolute';
-    img26.style.left = '368px';
-    img26.style.top = '1425px';
-    img26.style.width = `${img26.naturalWidth * scaleFactor26}px`;
-    img26.style.height = `${img26.naturalHeight * scaleFactor26}px`;
-  </script>
-
-  <img src="/art/16.png" alt="Image 16" id="image-16" />
-  <script>
-    const img16 = document.getElementById('image-16');
-    const scaleFactor16 = 0.27; // Change this value to customize the size
-    img16.style.position = 'absolute';
-    img16.style.left = '820px';
-    img16.style.top = '1425px';
-    img16.style.width = `${img16.naturalWidth * scaleFactor16}px`;
-    img16.style.height = `${img16.naturalHeight * scaleFactor16}px`;
-  </script>
-
- <img src="/art/11.png" alt="Image 11" id="image-11" />
-  <script>
-    const img11 = document.getElementById('image-11');
-    const scaleFactor11 = 0.6; // Change this value to customize the size
-    img11.style.position = 'absolute';
-    img11.style.left = '175px';
-    img11.style.top = '1890px';
-    img11.style.width = `${img11.naturalWidth * scaleFactor11}px`;
-    img11.style.height = `${img11.naturalHeight * scaleFactor11}px`;
-  </script>
-
-  <img src="/art/12.png" alt="Image 12" id="image-12" />
-  <script>
-    const img12 = document.getElementById('image-12');
-    const scaleFactor12 = 0.42; // Change this value to customize the size
-    img12.style.position = 'absolute';
-    img12.style.left = '25px';
-    img12.style.top = '2500px';
-    img12.style.width = `${img12.naturalWidth * scaleFactor12}px`;
-    img12.style.height = `${img12.naturalHeight * scaleFactor12}px`;
-  </script>
-
-  <img src="/art/14.png" alt="Image 14" id="image-14" />
-  <script>
-    const img14 = document.getElementById('image-14');
-    const scaleFactor14 = 0.42; // Change this value to customize the size
-    img14.style.position = 'absolute';
-    img14.style.left = '590px';
-    img14.style.top = '2550px';
-    img14.style.width = `${img14.naturalWidth * scaleFactor14}px`;
-    img14.style.height = `${img14.naturalHeight * scaleFactor14}px`;
-  </script>
-
-  <img src="/art/13.png" alt="Image 13" id="image-13" />
-  <script>
-    const img13 = document.getElementById('image-13');
-    const scaleFactor13 = 0.5; // Change this value to customize the size
-    img13.style.position = 'absolute';
-    img13.style.left = '25px';
-    img13.style.top = '3225px';
-    img13.style.width = `${img13.naturalWidth * scaleFactor13}px`;
-    img13.style.height = `${img13.naturalHeight * scaleFactor13}px`;
-  </script>
-
-  <img src="/art/3.png" alt="Image 3" id="image-3" />
-  <script>
-    const img3 = document.getElementById('image-3');
-    const scaleFactor3 = 0.33; // Change this value to customize the size
-    img3.style.position = 'absolute';
-    img3.style.left = '700px';
-    img3.style.top = '3127px';
-    img3.style.width = `${img3.naturalWidth * scaleFactor3}px`;
-    img3.style.height = `${img3.naturalHeight * scaleFactor3}px`;
-  </script>
-
-  <img src="/art/23.png" alt="Image 23" id="image-23" />
-  <script>
-    const img23 = document.getElementById('image-23');
-    const scaleFactor23 = 0.55; // Change this value to customize the size
-    img23.style.position = 'absolute';
-    img23.style.left = '240px';
-    img23.style.top = '3695px';
-    img23.style.width = `${img23.naturalWidth * scaleFactor23}px`;
-    img23.style.height = `${img23.naturalHeight * scaleFactor23}px`;
-  </script>
-
-  <img src="/art/21.png" alt="Image 21" id="image-21" />
-  <script>
-    const img21 = document.getElementById('image-21');
-    const scaleFactor21 = 0.34; // Change this value to customize the size
-    img21.style.position = 'absolute';
-    img21.style.left = '25px';
-    img21.style.top = '4585px';
-    img21.style.width = `${img21.naturalWidth * scaleFactor21}px`;
-    img21.style.height = `${img21.naturalHeight * scaleFactor21}px`;
-  </script>
-
-  <img src="/art/22.png" alt="Image 22" id="image-22" />
-  <script>
-    const img22 = document.getElementById('image-22');
-    const scaleFactor22 = 0.3; // Change this value to customize the size
-    img22.style.position = 'absolute';
-    img22.style.left = '585px';
-    img22.style.top = '4645px';
-    img22.style.width = `${img22.naturalWidth * scaleFactor22}px`;
-    img22.style.height = `${img22.naturalHeight * scaleFactor22}px`;
-  </script>
-
-  <img src="/art/6.png" alt="Image 6" id="image-6" />
-  <script>
-    const img6 = document.getElementById('image-6');
-    const scaleFactor6 = 0.35; // Change this value to customize the size
-    img6.style.position = 'absolute';
-    img6.style.left = '75px';
-    img6.style.top = '5125px';
-    img6.style.width = `${img6.naturalWidth * scaleFactor6}px`;
-    img6.style.height = `${img6.naturalHeight * scaleFactor6}px`;
-  </script>
-
-  <img src="/art/7.png" alt="Image 7" id="image-7" />
-  <script>
-    const img7 = document.getElementById('image-7');
-    const scaleFactor7 = 0.3; // Change this value to customize the size
-    img7.style.position = 'absolute';
-    img7.style.left = '625px';
-    img7.style.top = '5065px';
-    img7.style.width = `${img7.naturalWidth * scaleFactor7}px`;
-    img7.style.height = `${img7.naturalHeight * scaleFactor7}px`;
-  </script>
-
-  <img src="/art/9.png" alt="Image 9" id="image-9" />
-  <script>
-    const img9 = document.getElementById('image-9');
-    const scaleFactor9 = 0.25; // Change this value to customize the size
-    img9.style.position = 'absolute';
-    img9.style.left = '25px';
-    img9.style.top = '5604px';
-    img9.style.width = `${img9.naturalWidth * scaleFactor9}px`;
-    img9.style.height = `${img9.naturalHeight * scaleFactor9}px`;
-  </script>
-
-  <img src="/art/2.png" alt="Image 2" id="image-2" />
-  <script>
-    const img2 = document.getElementById('image-2');
-    const scaleFactor2 = 0.26; // Change this value to customize the size
-    img2.style.position = 'absolute';
-    img2.style.left = '495px';
-    img2.style.top = '5604px';
-    img2.style.width = `${img2.naturalWidth * scaleFactor2}px`;
-    img2.style.height = `${img2.naturalHeight * scaleFactor2}px`;
-  </script>
-
-  <img src="/art/4.png" alt="Image 4" id="image-4" />
-  <script>
-    const img4 = document.getElementById('image-4');
-    const scaleFactor4 = 0.19; // Change this value to customize the size
-    img4.style.position = 'absolute';
-    img4.style.left = '800px';
-    img4.style.top = '5600px';
-    img4.style.width = `${img4.naturalWidth * scaleFactor4}px`;
-    img4.style.height = `${img4.naturalHeight * scaleFactor4}px`;
-  </script>
-
-  <img src="/art/8.png" alt="Image 8" id="image-8" />
-  <script>
-    const img8 = document.getElementById('image-8');
-    const scaleFactor8 = 0.5; // Change this value to customize the size
-    img8.style.position = 'absolute';
-    img8.style.left = '225px';
-    img8.style.top = '5955px';
-    img8.style.width = `${img8.naturalWidth * scaleFactor8}px`;
-    img8.style.height = `${img8.naturalHeight * scaleFactor8}px`;
-  </script>
-
-  <img src="/art/10.png" alt="Image 10" id="image-10" />
-  <script>
-    const img10 = document.getElementById('image-10');
-    const scaleFactor10 = 0.45; // Change this value to customize the size
-    img10.style.position = 'absolute';
-    img10.style.left = '25px';
-    img10.style.top = '6775px';
-    img10.style.width = `${img10.naturalWidth * scaleFactor10}px`;
-    img10.style.height = `${img10.naturalHeight * scaleFactor10}px`;
-  </script>
-
-  <img src="/art/24.png" alt="Image 24" id="image-24" />
-  <script>
-    const img24 = document.getElementById('image-24');
-    const scaleFactor24 = 0.333; // Change this value to customize the size
-    img24.style.position = 'absolute';
-    img24.style.left = '595px';
-    img24.style.top = '6775px';
-    img24.style.width = `${img24.naturalWidth * scaleFactor24}px`;
-    img24.style.height = `${img24.naturalHeight * scaleFactor24}px`;
-  </script>
-
-  <img src="/art/5.png" alt="Image 5" id="image-5" />
-  <script>
-    const img5 = document.getElementById('image-5');
-    const scaleFactor5 = 0.35; // Change this value to customize the size
-    img5.style.position = 'absolute';
-    img5.style.left = '105px';
-    img5.style.top = '7225px';
-    img5.style.width = `${img5.naturalWidth * scaleFactor5}px`;
-    img5.style.height = `${img5.naturalHeight * scaleFactor5}px`;
-  </script>
-
-  <img src="/art/25.png" alt="Image 25" id="image-25" />
-  <script>
-    const img25 = document.getElementById('image-25');
-    const scaleFactor25 = 0.339; // Change this value to customize the size
-    img25.style.position = 'absolute';
-    img25.style.left = '595px';
-    img25.style.top = '7225px';
-    img25.style.width = `${img25.naturalWidth * scaleFactor25}px`;
-    img25.style.height = `${img25.naturalHeight * scaleFactor25}px`;
-  </script>
-
-  <img src="/art/20.png" alt="Image 20" id="image-20" />
-  <script>
-    const img20 = document.getElementById('image-20');
-    const scaleFactor20 = 0.3; // Change this value to customize the size
-    img20.style.position = 'absolute';
-    img20.style.left = '75px';
-    img20.style.top = '7825px';
-    img20.style.width = `${img20.naturalWidth * scaleFactor20}px`;
-    img20.style.height = `${img20.naturalHeight * scaleFactor20}px`;
-  </script>
-
-  <img src="/art/27.png" alt="Image 27" id="image-27" />
-  <script>
-    const img27 = document.getElementById('image-27');
-    const scaleFactor27 = 0.3456; // Change this value to customize the size
-    img27.style.position = 'absolute';
-    img27.style.left = '525px';
-    img27.style.top = '7825px';
-    img27.style.width = `${img27.naturalWidth * scaleFactor27}px`;
-    img27.style.height = `${img27.naturalHeight * scaleFactor27}px`;
-  </script>
-
-<div class="image-container">
-  <div id="text-1" class="text-3xl w-full font-bold mb-5 ">Oh, and I didn't forget to draw myself ... </div>
-  <script>
-    const text1 = document.getElementById('text-1');
-    text1.style.position = 'absolute';
-    text1.style.left = '425px';
-    text1.style.top = '8375px';
-    text1.style.width = '800px';
-    text1.style.height = '150px';
-  </script>
-</div>
-
-  <img src="/art/0.png" alt="Myself!" id="image-0" />
-  <script>
-    const img0 = document.getElementById('image-0');
-    const scaleFactor0 = 0.75; // Change this value to customize the size
-    img0.style.position = 'absolute';
-    img0.style.left = '325px';
-    img0.style.top = '8460px';
-    img0.style.width = `${img0.naturalWidth * scaleFactor0}px`;
-    img0.style.height = `${img0.naturalHeight * scaleFactor0}px`;
-  </script>
-
-<div class="flex-container">
-  <div id="text-2" class="text-1l w-full mb-5 "> (confused by the world, as always, of course!) </div>
-  <script>
-    const text2 = document.getElementById('text-2');
-    text2.style.position = 'absolute';
-    text2.style.left = '376px';
-    text2.style.top = '8915px';
-    text2.style.width = '800px';
-    text2.style.height = '150px';
-  </script>
-</div>
-
-</div>
-
-<style>
-
-  .image-container {
-    position: relative;
-    width: 1000px;
-    height: 9100px;
-    margin-left: -150px;
-  }
-</style>
-
 </BaseLayout>
