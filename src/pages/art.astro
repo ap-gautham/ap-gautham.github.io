@@ -1,120 +1,225 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import HorizontalCard from "../components/HorizontalCard.astro";
-import { Image } from "astro:assets";
 ---
 
-<BaseLayout title = "Projects" sideBarActiveItemID="projects">
-  <div class="image-container">
-    
-    <div id="text-0" class="text-3xl w-full font-bold mb-5">My sketches and paintings from over the years!</div>
+<BaseLayout title="Art" sideBarActiveItemID="projects">
+  <div class="text-3xl w-full font-bold mb-2">My sketches and paintings from over the years!</div>
 
-    <img src="/art/1.png" alt="Image 1" id="image-1" />
-    <img src="/art/17.png" alt="Image 17" id="image-17" />
-    <img src="/art/15.png" alt="Image 15" id="image-15" />
-    <img src="/art/18.png" alt="Image 18" id="image-18" />
-    <img src="/art/19.png" alt="Image 19" id="image-19" />
-    <img src="/art/26.png" alt="Image 26" id="image-26" />
-    <img src="/art/16.png" alt="Image 16" id="image-16" />
-    <img src="/art/11.png" alt="Image 11" id="image-11" />
-    <img src="/art/12.png" alt="Image 12" id="image-12" />
-    <img src="/art/14.png" alt="Image 14" id="image-14" />
-    <img src="/art/13.png" alt="Image 13" id="image-13" />
-    <img src="/art/3.png" alt="Image 3" id="image-3" />
-    <img src="/art/23.png" alt="Image 23" id="image-23" />
-    <img src="/art/21.png" alt="Image 21" id="image-21" />
-    <img src="/art/22.png" alt="Image 22" id="image-22" />
-    <img src="/art/6.png" alt="Image 6" id="image-6" />
-    <img src="/art/7.png" alt="Image 7" id="image-7" />
-    <img src="/art/9.png" alt="Image 9" id="image-9" />
-    <img src="/art/2.png" alt="Image 2" id="image-2" />
-    <img src="/art/4.png" alt="Image 4" id="image-4" />
-    <img src="/art/8.png" alt="Image 8" id="image-8" />
-    <img src="/art/10.png" alt="Image 10" id="image-10" />
-    <img src="/art/24.png" alt="Image 24" id="image-24" />
-    <img src="/art/5.png" alt="Image 5" id="image-5" />
-    <img src="/art/25.png" alt="Image 25" id="image-25" />
-    <img src="/art/20.png" alt="Image 20" id="image-20" />
-    <img src="/art/27.png" alt="Image 27" id="image-27" />
-    <img src="/art/0.png" alt="Myself!" id="image-0" />
-    
-    <div id="text-1" class="text-3xl w-full font-bold mb-5 ">Oh, and I didn't forget to draw myself ... </div>
-    <div id="text-2" class="text-1l w-full mb-5 "> (confused by the world, as always, of course!) </div>
+  <div class="masonry-gallery">
+    <div class="masonry-item">
+      <a href="/art/1.png" class="glightbox" data-gallery="gallery1">
+        <img src="/art/1.png" alt="Image 1" loading="lazy" />
+      </a>
+    </div>
+    <div class="masonry-item">
+      <a href="/art/15.png" class="glightbox" data-gallery="gallery1">
+        <img src="/art/15.png" alt="Image 15" loading="lazy" />
+      </a>
+    </div>
+    <div class="masonry-item">
+      <a href="/art/17.png" class="glightbox" data-gallery="gallery1">
+        <img src="/art/17.png" alt="Image 17" loading="lazy" />
+      </a>
+    </div>
+    <div class="masonry-item">
+      <a href="/art/18.png" class="glightbox" data-gallery="gallery1">
+        <img src="/art/18.png" alt="Image 18" loading="lazy" />
+      </a>
+    </div>
+    <div class="masonry-item">
+      <a href="/art/19.png" class="glightbox" data-gallery="gallery1">
+        <img src="/art/19.png" alt="Image 19" loading="lazy" />
+      </a>
+    </div>
+    <div class="masonry-item">
+      <a href="/art/26.png" class="glightbox" data-gallery="gallery1">
+        <img src="/art/26.png" alt="Image 26" loading="lazy" />
+      </a>
+    </div>
+    <div class="masonry-item">
+      <a href="/art/16.png" class="glightbox" data-gallery="gallery1">
+        <img src="/art/16.png" alt="Image 16" loading="lazy" />
+      </a>
+    </div>
+    <div class="masonry-item">
+      <a href="/art/11.png" class="glightbox" data-gallery="gallery1">
+        <img src="/art/11.png" alt="Image 11" loading="lazy" />
+      </a>
+    </div>
+    <div class="masonry-item">
+      <a href="/art/12.png" class="glightbox" data-gallery="gallery1">
+        <img src="/art/12.png" alt="Image 12" loading="lazy" />
+      </a>
+    </div>
+    <div class="masonry-item">
+      <a href="/art/14.png" class="glightbox" data-gallery="gallery1">
+        <img src="/art/14.png" alt="Image 14" loading="lazy" />
+      </a>
+    </div>
+    <div class="masonry-item">
+      <a href="/art/13.png" class="glightbox" data-gallery="gallery1">
+        <img src="/art/13.png" alt="Image 13" loading="lazy" />
+      </a>
+    </div>
+    <div class="masonry-item">
+      <a href="/art/3.png" class="glightbox" data-gallery="gallery1">
+        <img src="/art/3.png" alt="Image 3" loading="lazy" />
+      </a>
+    </div>
+    <div class="masonry-item">
+      <a href="/art/23.png" class="glightbox" data-gallery="gallery1">
+        <img src="/art/23.png" alt="Image 23" loading="lazy" />
+      </a>
+    </div>
+    <div class="masonry-item">
+      <a href="/art/21.png" class="glightbox" data-gallery="gallery1">
+        <img src="/art/21.png" alt="Image 21" loading="lazy" />
+      </a>
+    </div>
+    <div class="masonry-item">
+      <a href="/art/22.png" class="glightbox" data-gallery="gallery1">
+        <img src="/art/22.png" alt="Image 22" loading="lazy" />
+      </a>
+    </div>
+    <div class="masonry-item">
+      <a href="/art/6.png" class="glightbox" data-gallery="gallery1">
+        <img src="/art/6.png" alt="Image 6" loading="lazy" />
+      </a>
+    </div>
+    <div class="masonry-item">
+      <a href="/art/7.png" class="glightbox" data-gallery="gallery1">
+        <img src="/art/7.png" alt="Image 7" loading="lazy" />
+      </a>
+    </div>
+    <div class="masonry-item">
+      <a href="/art/9.png" class="glightbox" data-gallery="gallery1">
+        <img src="/art/9.png" alt="Image 9" loading="lazy" />
+      </a>
+    </div>
+    <div class="masonry-item">
+      <a href="/art/2.png" class="glightbox" data-gallery="gallery1">
+        <img src="/art/2.png" alt="Image 2" loading="lazy" />
+      </a>
+    </div>
+    <div class="masonry-item">
+      <a href="/art/4.png" class="glightbox" data-gallery="gallery1">
+        <img src="/art/4.png" alt="Image 4" loading="lazy" />
+      </a>
+    </div>
+    <div class="masonry-item">
+      <a href="/art/8.png" class="glightbox" data-gallery="gallery1">
+        <img src="/art/8.png" alt="Image 8" loading="lazy" />
+      </a>
+    </div>
+    <div class="masonry-item">
+      <a href="/art/10.png" class="glightbox" data-gallery="gallery1">
+        <img src="/art/10.png" alt="Image 10" loading="lazy" />
+      </a>
+    </div>
+    <div class="masonry-item">
+      <a href="/art/24.png" class="glightbox" data-gallery="gallery1">
+        <img src="/art/24.png" alt="Image 24" loading="lazy" />
+      </a>
+    </div>
+    <div class="masonry-item">
+      <a href="/art/5.png" class="glightbox" data-gallery="gallery1">
+        <img src="/art/5.png" alt="Image 5" loading="lazy" />
+      </a>
+    </div>
+    <div class="masonry-item">
+      <a href="/art/25.png" class="glightbox" data-gallery="gallery1">
+        <img src="/art/25.png" alt="Image 25" loading="lazy" />
+      </a>
+    </div>
+    <div class="masonry-item">
+      <a href="/art/20.png" class="glightbox" data-gallery="gallery1">
+        <img src="/art/20.png" alt="Image 20" loading="lazy" />
+      </a>
+    </div>
+    <div class="masonry-item">
+      <a href="/art/27.png" class="glightbox" data-gallery="gallery1">
+        <img src="/art/27.png" alt="Image 27" loading="lazy" />
+      </a>
+    </div>
+  </div>
+
+  <div class="mt-8 text-center">
+    <div class="text-2xl font-bold">Oh, and I didn't forget to draw myself ...</div>
+    <a href="/art/0.png" class="glightbox" data-gallery="gallery1">
+      <img src="/art/0.png" alt="Myself!" loading="lazy" class="myself-img" />
+    </a>
+    <div class="text-base mt-1">(confused by the world, as always!)</div>
   </div>
 
   <style>
-    .image-container {
-      position: relative;
-      width: 1000px;
-      height: 9100px;
-      margin-left: -150px;
+    .masonry-gallery {
+      columns: 2;
+      column-gap: 1rem;
+      margin-top: 1.5rem;
+    }
+
+    .masonry-item {
+      break-inside: avoid;
+      margin-bottom: 1rem;
+    }
+
+    .masonry-item img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 4px;
+      border: 2px solid rgb(255, 255, 255);
+      box-shadow: 0 0 3px 0px rgba(223, 219, 195, 0.84);
+      transition: box-shadow 0.3s ease, border-color 0.3s ease;
+      cursor: pointer;
+    }
+
+    .masonry-item img:hover {
+      border-color: rgba(255, 255, 255, 0.9);
+      box-shadow: 0 0 20px 5px rgba(237, 216, 98, 0.4);
+    }
+
+    @media (max-width: 768px) {
+      .masonry-gallery {
+        columns: 2;
+      }
+    }
+
+    .myself-img {
+      display: block;
+      margin: 1rem auto;
+      max-width: 400px;
+      width: 100%;
+      height: auto;
+      border-radius: 4px;
+      border: 2px solid rgb(255, 255, 255);
+      box-shadow: 0 0 3px 0px rgba(223, 219, 195, 0.84);
+      transition: box-shadow 0.3s ease, border-color 0.3s ease;
+      cursor: pointer;
+    }
+
+    .myself-img:hover {
+      border-color: rgba(255, 255, 255, 0.9);
+      box-shadow: 0 0 20px 10px rgba(225, 203, 79, 0.4);
+    }
+
+    @media (max-width: 480px) {
+      .masonry-gallery {
+        columns: 1;
+      }
     }
   </style>
 
   <script>
-    function positionElements() {
-      const pageElements = [
-	{ id: 'text-0', left: '280px', top: '-28px', width: '800px', height: '150px', type: 'text' },
-        { id: 'image-1', scale: 0.4, left: '625px', top: '25px', type: 'image' },
-        { id: 'image-17', scale: 0.455, left: '25px', top: '25px', type: 'image' },
-        { id: 'image-15', scale: 0.35, left: '55px', top: '800px', type: 'image' },
-        { id: 'image-18', scale: 0.425, left: '621px', top: '715px', type: 'image' },
-        { id: 'image-19', scale: 0.27, left: '25px', top: '1425px', type: 'image' },
-        { id: 'image-26', scale: 0.27, left: '368px', top: '1425px', type: 'image' },
-        { id: 'image-16', scale: 0.27, left: '820px', top: '1425px', type: 'image' },
-        { id: 'image-11', scale: 0.6, left: '175px', top: '1890px', type: 'image' },
-        { id: 'image-12', scale: 0.42, left: '25px', top: '2500px', type: 'image' },
-        { id: 'image-14', scale: 0.42, left: '590px', top: '2550px', type: 'image' },
-        { id: 'image-13', scale: 0.5, left: '25px', top: '3225px', type: 'image' },
-        { id: 'image-3', scale: 0.33, left: '700px', top: '3127px', type: 'image' },
-        { id: 'image-23', scale: 0.55, left: '240px', top: '3695px', type: 'image' },
-        { id: 'image-21', scale: 0.34, left: '25px', top: '4585px', type: 'image' },
-        { id: 'image-22', scale: 0.3, left: '585px', top: '4645px', type: 'image' },
-        { id: 'image-6', scale: 0.35, left: '75px', top: '5125px', type: 'image' },
-        { id: 'image-7', scale: 0.3, left: '625px', top: '5065px', type: 'image' },
-        { id: 'image-9', scale: 0.25, left: '25px', top: '5604px', type: 'image' },
-        { id: 'image-2', scale: 0.26, left: '495px', top: '5604px', type: 'image' },
-        { id: 'image-4', scale: 0.19, left: '800px', top: '5600px', type: 'image' },
-        { id: 'image-8', scale: 0.5, left: '225px', top: '5955px', type: 'image' },
-        { id: 'image-10', scale: 0.45, left: '25px', top: '6775px', type: 'image' },
-        { id: 'image-24', scale: 0.333, left: '595px', top: '6775px', type: 'image' },
-        { id: 'image-5', scale: 0.35, left: '105px', top: '7225px', type: 'image' },
-        { id: 'image-25', scale: 0.339, left: '595px', top: '7225px', type: 'image' },
-        { id: 'image-20', scale: 0.3, left: '75px', top: '7825px', type: 'image' },
-        { id: 'image-27', scale: 0.3456, left: '525px', top: '7825px', type: 'image' },
-        { id: 'image-0', scale: 0.75, left: '325px', top: '8460px', type: 'image' },
-        { id: 'text-1', left: '305px', top: '8375px', width: '800px', height: '150px', type: 'text' },
-        { id: 'text-2', left: '376px', top: '8915px', width: '800px', height: '150px', type: 'text' },
-      ];
+    import GLightbox from 'glightbox';
+    import 'glightbox/dist/css/glightbox.min.css';
 
-      pageElements.forEach(item => {
-        const el = document.getElementById(item.id);
-        if (!el) return;
-
-        el.style.position = 'absolute';
-        el.style.left = item.left;
-        el.style.top = item.top;
-
-        if (item.type === 'image') {
-          if (el.naturalWidth > 0 && el.naturalHeight > 0) {
-            el.style.width = `${el.naturalWidth * item.scale}px`;
-            el.style.height = `${el.naturalHeight * item.scale}px`;
-          }
-        } else if (item.type === 'text') {
-          el.style.width = item.width;
-          el.style.height = item.height;
-        }
-      });
-    }
-
-    // Run the script after a brief delay to give all content a chance to load
-    setTimeout(positionElements, 250);
-
-    // Re-run the positioning when the page is restored from the back/forward cache
-    window.addEventListener('pageshow', (event) => {
-      if (event.persisted) {
-        positionElements();
-      }
+    const lightbox = GLightbox({
+      selector: '.glightbox',
+      touchNavigation: true,
+      loop: true,
+      closeButton: true,
+      zoomable: true,
     });
   </script>
 </BaseLayout>

@@ -12,13 +12,14 @@ const last_posts = posts.slice(0, 3);
 <BaseLayout sideBarActiveItemID="home">
 
   <div class="pb-12 mt-5">
-    <div class="text-xl py-1">Namaste!</div>
+    <div class="text-xl py-1 text-primary font-medium">Namaste!</div>
     <div class="text-5xl font-bold">I am Gautham Adamane Pallathadka</div>
-    <div class="text-3xl py-3 font-bold">Astrophysicist (and an amateur artist, tennis player, chess player .... )</div>
+    <div class="text-3xl py-3 font-bold text-base-content/80">Astrophysicist (and an amateur artist, tennis player, chess player .... )</div>
     <div class="py-2">
-      <text class="text-lg">
-        I am currently pursing Ph.D. at Johns Hopkins University working on the discovery and characterization of White Dwarf-White Dwarf binaries.
+      <text class="text-lg text-base-content/70">
+        I am currently pursing Ph.D. at Johns Hopkins University working on the discovery and characterization of white dwarf binaries.
       </text>
+
     </div>
 <!--    <div class="mt-8">
       <a class="btn" href="https://www.linkedin.com/in/gautham-adamane-pallathadka-4b271b1b7" target="_blank"> Let's connect on Linkedin!</a>
@@ -27,7 +28,7 @@ const last_posts = posts.slice(0, 3);
   </div>
 
   <div>
-    <div class="text-3xl w-full font-bold mb-2">My recent papers : </div>
+    <div class="text-3xl w-full font-bold mb-2 section-heading">My recent publications: </div>
   </div>
 
   <HorizontalCard
@@ -47,6 +48,11 @@ const last_posts = posts.slice(0, 3);
     badge=""
   />
   <div class="divider my-0"></div>
+
+<div class="mt-8 flex flex-wrap gap-4">
+      <a class="btn btn-glow" href="https://scholar.google.com/citations?user=kkTqe-MAAAAJ&hl=en" target="_blank"> You can find my full list of publications on Google Scholar!</a>
+      <a class="btn btn-glow" href="https://orcid.org/0000-0002-5864-1332" target="_blank"> You can also find it on ORCID!</a>
+    </div>
 
 
 <!--

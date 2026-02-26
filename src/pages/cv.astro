@@ -4,19 +4,23 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
 ---
 <style>
 a:link {
-  color: blue;
+  color: oklch(var(--p));
   background-color: transparent;
   text-decoration: none;
 }
 
-A:visted {
-  color: blue;
+a:visited {
+  color: oklch(var(--p) / 0.8);
   background-color: transparent;
   text-decoration: none;
 }
 
-A:active {
-  color: blue;
+a:hover {
+  text-decoration: underline;
+}
+
+a:active {
+  color: oklch(var(--p));
   background-color: transparent;
   text-decoration: none;
 }
@@ -24,35 +28,35 @@ A:active {
 
 <BaseLayout title="Resume" sideBarActiveItemID="cv">
   <div class="mb-5">
-    <div class="text-3xl w-full font-bold">Profile</div>
+    <div class="text-3xl w-full font-bold section-heading">Profile</div>
   </div>
 
   <div class="mb-10 text-justify">
-    I am a doctoral student at Johns Hopkins University, where I'm passionately pursuing research into Type-Ia supernova progenitors to help unravel the mysteries of stellar binary evolution. Broadly, I am also interested in the intricate history of binary stars, with a specific interest in the mass transfer phases, especially the complex and often chaotic common envelope phase, as well as the fascinating study of post-common envelope binaries. Beyond physics, I am captivated by all kinds messy topics, and enjoy the challenge of finding gems within chaotic systems.
+    I am a doctoral student at Johns Hopkins University, where I'm passionately pursuing research into Type-Ia supernova progenitors to help unravel the mysteries of stellar binary evolution. Broadly, I am also interested in the intricate history of binary stars, with a specific interest in the mass transfer phases, especially the complex and often chaotic common envelope phase, as well as the fascinating study of post-common envelope binaries. Beyond physics, I am captivated by all kinds of messy topics, and enjoy the challenge of finding gems within chaotic systems.
 
   </div>
 
   <div class="mb-5">
-    <div class="text-3xl w-full font-bold">Education</div>
+    <div class="text-3xl w-full font-bold section-heading">Education</div>
   </div>
 
   <div class="time-line-container grid gap-4 mb-10">
     <TimeLineElement
       title="Bachelor of Science and Master of Science in Physics"
-      subtitle="2016 to 2021 at Indian Institute of Technology Madras (IITM), Chennai, India"
+      subtitle="2016 - 2021 at Indian Institute of Technology Madras (IITM), Chennai, India"
     />
     <TimeLineElement
       title="Master of Arts in Physics"
-      subtitle="2021 to 2023 at Johns Hopkins University (JHU), Baltimore, U.S.A"
+      subtitle="2021 - 2023 at Johns Hopkins University (JHU), Baltimore, U.S.A"
     />
     <TimeLineElement
       title="Doctor of Philosophy in Astrophysics"
-      subtitle="2021 to 2027 (expected) at Johns Hopkins University (JHU), Baltimore, U.S.A"
+      subtitle="2021 - 2027 (expected) at Johns Hopkins University (JHU), Baltimore, U.S.A"
     />
   </div>
 
   <div class="mb-5">
-    <div class="text-3xl w-full font-bold">Experience</div>
+    <div class="text-3xl w-full font-bold section-heading">Experience</div>
   </div>
 
   <div class="time-line-container mb-10">
@@ -60,30 +64,44 @@ A:active {
       title="Research Internship at Raman Research Institute (RRI), Bangalore, India"
       subtitle="Advisor: Prof. Shiv Sethi (2018-2020)"
     >
-      I modeled charged, interacting dark matter matter models and implemented it into the cosmological Boltzmann equations. I then simulated the impact of these new models on the evolution of our universe, and performed Markov Chain Monte Carlo (MCMC) analysis to place bounds on possible parameter space of charged dark matter models. This resulted in the paper : <a href = "https://doi.org/10.1088/1475-7516/2020/03/039">Cosmological implications of electromagnetically interacting dark matter: milli-charged particles and atoms with singly and doubly charged dark matter.</a>
-	</TimeLineElement>
-
+      <span class="text-sm"> I modeled charged, interacting dark matter models and implemented it into the cosmological Boltzmann equations. I then simulated the impact of these new models on the evolution of our universe, and performed Markov Chain Monte Carlo (MCMC) analysis to place bounds on possible parameter space of charged dark matter models. 
+      <br>
+      <br>
+      <span class="font-bold">Link to the publication: </span> <a href = "https://doi.org/10.1088/1475-7516/2020/03/039" style="color: #1100ff;">Cosmological implications of electromagnetically interacting dark matter: milli-charged particles and atoms with singly and doubly charged dark matter.</a>
+      </span> 
+      <br>
+      <br>
+	  </TimeLineElement>
     <TimeLineElement
       title="Research Internship at Laboratoire d’Annecy-le-Vieux de Physique Théorique (LAPTh), Annecy, France"
       subtitle="Advisor: Dr. Francesca Calore (2019-2021)"
     >
-      I used a model of axion like particle (ALP), that can morph into photons, to explain oscillations observed in gamma-ray spectra of Pulsars. I leveraged the faster execution of C++ and community developed physics packages in Python, and developed an efficient code to simulate the photon-ALP interaction by integrating Python to run with C++. Using this I performed maximum likelihood analysis to place constraints on ALP models. This resulted in the paper : <a href = "https://doi.org/10.1088/1475-7516/2021/11/036">Reconciling hints on axion-like-particles from high-energy gamma rays with stellar bounds.</a>
-
-	</TimeLineElement>
+      <span class="text-sm"> I used a model of axion like particle (ALP), that can morph into photons, to explain oscillations observed in gamma-ray spectra of Pulsars. I leveraged the faster execution of C++ and community developed physics packages in Python, and developed an efficient code to simulate the photon-ALP interaction by integrating Python to run with C++. Using this I performed maximum likelihood analysis to place constraints on ALP models. 
+      <br>
+      <br>
+      <span class="font-bold">Link to the publication: </span> <a href = "https://doi.org/10.1088/1475-7516/2021/11/036" style="color: #1100ff;">Reconciling hints on axion-like-particles from high-energy gamma rays with stellar bounds.
+      </a>
+      </span>
+      <br>
+      <br>
+	  </TimeLineElement>
 
     <TimeLineElement
       title="Master's thesis project at Indian Institute of Technology Madras (IITM), Chennai, India"
-      subtitle="Advisor: Prof. Dawood Kothawala (2020-2021)"
+      subtitle="Advisor: Prof. Dawood Kothawala (2020-2021)" 
     >
-      I studied particle production in curved space using worldline instanton formalism. I explored the application of instanton formalism to study particle production due to complex scalar field in de-Sitter spacetime, and reproduced the form for Schwinger particle production in de-Sitter spacetime.
+      <span class="text-sm"> I studied particle production in curved space using worldline instanton formalism. I explored the application of instanton formalism to study particle production due to complex scalar fields in de-Sitter spacetime, and reproduced the form for Schwinger particle production in de-Sitter spacetime.
+      </span>
+      <br>
+      <br>
     </TimeLineElement>
-
     <TimeLineElement
-      title="PhD thesis at Johns Hopkins University (JHU), Baltimore, U.S.A"
-      subtitle="Advisor: Prof. Nadia Zakamska (2022-Now)"
+      title="PhD at Johns Hopkins University (JHU), Baltimore, U.S.A"
+      subtitle="Advisor: Prof. Nadia L. Zakamska (2022-Present)"
     >
+      <br>
+      <br>
     </TimeLineElement>
-
   </div>
 
 <!--
@@ -102,7 +120,7 @@ A:active {
 -->
 
   <div class="mb-5">
-    <div class="text-3xl w-full font-bold">Skills</div>
+    <div class="text-3xl w-full font-bold section-heading">Skills</div>
   </div>
 
   <ul class="list-disc mx-6 mb-10 grid gap-2">
@@ -111,7 +129,7 @@ A:active {
   </ul>
 
   <div class="mb-5">
-    <div class="text-3xl w-full font-bold">Teaching Assistantship courses</div>
+    <div class="text-3xl w-full font-bold section-heading">Teaching Assistantship courses</div>
   </div>
 
   <ul class="list-disc mx-6 mb-10 grid gap-2">
