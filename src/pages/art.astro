@@ -5,7 +5,15 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 <BaseLayout title="Art" sideBarActiveItemID="projects">
   <div class="text-3xl w-full font-bold mb-2">My sketches and paintings from over the years!</div>
 
-  <div class="masonry-gallery">
+  <div class="featured-latest text-center mt-6">
+    <div class="text-2xl font-bold mb-2">My latest work!</div>
+    <a href="/art/28.jpg" class="glightbox" data-gallery="gallery1">
+      <img src="/art/28.jpg" alt="Latest work" loading="lazy" class="featured-img mx-auto" />
+    </a>
+  </div>
+
+  <div class="masonry-gallery mt-6">
+    
     <div class="masonry-item">
       <a href="/art/1.png" class="glightbox" data-gallery="gallery1">
         <img src="/art/1.png" alt="Image 1" loading="lazy" />
@@ -183,6 +191,25 @@ import BaseLayout from "../layouts/BaseLayout.astro";
       .masonry-gallery {
         columns: 2;
       }
+    }
+
+    .featured-img {
+      display: block;
+      margin: 0.5rem auto 1.5rem auto;
+      max-width: 900px;
+      width: 100%;
+      height: auto;
+      border-radius: 6px;
+      border: 3px solid rgb(255, 255, 255);
+      box-shadow: 0 8px 30px -6px rgba(0,0,0,0.5), 0 0 6px 0 rgba(223,219,195,0.7);
+      transition: box-shadow 0.3s ease, border-color 0.3s ease, transform 0.15s ease;
+      cursor: pointer;
+    }
+
+    .featured-img:hover {
+      border-color: rgba(255,255,255,0.95);
+      box-shadow: 0 12px 40px -6px rgba(0,0,0,0.6), 0 0 30px 6px rgba(237,216,98,0.18);
+      transform: translateY(-2px);
     }
 
     .myself-img {
